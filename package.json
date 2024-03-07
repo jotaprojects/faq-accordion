@@ -1,0 +1,20 @@
+{
+  "name": "faq-accordion",
+  "version": "1.0.0",
+  "description": "![Design preview for the FAQ accordion coding challenge](./design/desktop-preview.jpg)",
+  "main": "script.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "stylelint": "^16.2.1",
+    "stylelint-config-standard": "^36.0.0",
+    "stylelint-order": "^6.0.4",
+    "vite": "^5.1.5"
+  }
+}

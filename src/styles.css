@@ -1,0 +1,137 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --icon-size: 1.9rem;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  align-items: flex-start;
+  background-color: hsl(275deg 100% 97%);
+  color: hsl(292deg 42% 14%);
+  display: flex;
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 400;
+  justify-content: center;
+  margin: 0;
+  min-height: 100vh;
+  padding: 5rem 1rem 0;
+}
+
+.bg {
+  background-image: url("assets/images/background-pattern-mobile.svg");
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 10rem;
+  inset: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.content {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 2rem 0 rgba(0 0 0 0.5);
+  max-width: 600px;
+  padding: 1.4rem;
+  width: 100%;
+}
+
+h1 {
+  align-items: center;
+  display: flex;
+  gap: 1.4rem;
+  margin: 0 0 1rem;
+}
+
+h1::before {
+  background-image: url("assets/images/icon-star.svg");
+  background-size: var(--icon-size);
+  content: "";
+  height: var(--icon-size);
+  width: var(--icon-size);
+}
+
+.accordion {}
+
+.accordion__item {
+  border-top: 1px solid rgba(0, 0, 0, 10%);
+  padding: 1.2rem 0;
+}
+
+.accordion__item:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.accordion__item:last-child {
+  padding-bottom: 0;
+}
+
+.accordion__item--active .accordion__item-title::after {
+  background-image: url("assets/images/icon-minus.svg");
+}
+
+.accordion__item--active .accordion__item-content {
+  display: block;
+}
+
+.accordion__item-title {
+  align-items: center;
+  background-color: transparent;
+  border: 0;
+  color: hsl(292deg 42% 14%);
+  cursor: pointer;
+  display: flex;
+  font-size: 1rem;
+  font-weight: 700;
+  gap: 1rem;
+  padding: 0;
+  text-align: left;
+  width: 100%;
+}
+
+.accordion__item-title:hover {
+  color: hsl(280deg 80% 60%);
+}
+
+.accordion__item-title:focus {
+  color: hsl(292deg 42% 14%);
+}
+
+.accordion__item-title::after {
+  background-image: url("assets/images/icon-plus.svg");
+  background-repeat: no-repeat;
+  background-size: var(--icon-size);
+  content: "";
+  flex-shrink: 0;
+  height: var(--icon-size);
+  margin-left: auto;
+  width: var(--icon-size);
+}
+
+.accordion__item-content {
+  color: hsl(292deg 16% 49%);
+  display: none;
+  font-size: 0.85rem;
+  line-height: 1.25rem;
+  padding-top: 1.2rem;
+}
+
+/* Media queries */
+
+@media screen and (min-width: 50em) {
+  .bg {
+    background-image: url("assets/images/background-pattern-desktop.svg");
+  }
+}
