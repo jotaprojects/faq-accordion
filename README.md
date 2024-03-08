@@ -50,9 +50,12 @@ The background image was tricky to find a good solution. I research on other sit
 My conclusion is that you can solve this in many different ways. 
 I chose an extra div with background-image property. I did try out to set the background to `body` but then I got a problem when I used the min-height: 100vh so that is why I changed to an extra div. 
 
-- Left to do is to read up on accessibility for the accordion. 
-
 **Note:** Vite seems to only build and copy the javascript file when using `type="module"` on the script-tag itself. Good to know for future projects. 
+
+### TODO
+
+- Read up on accessibility for the accordion. (aria)
+- Implement so only one of the questions is open. (js) 
 
 ### Continued development
 
