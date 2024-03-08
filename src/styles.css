@@ -41,7 +41,7 @@ body {
 .content {
   background-color: #fff;
   border-radius: 0.5rem;
-  box-shadow: 0 0 2rem 0 rgba(0 0 0 0.5);
+  box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.5);
   max-width: 600px;
   padding: 1.4rem;
   width: 100%;
@@ -64,18 +64,19 @@ h1::before {
 
 .accordion {}
 
-.accordion__item {
-  border-top: 1px solid rgba(0, 0, 0, 10%);
-  padding: 1.2rem 0;
+.accordion__item {}
+
+.accordion__item::after {
+  background: linear-gradient(90deg, #fff 0, #ccc 10%, #ccc 90%, #fff 100%);
+  content: "";
+  display: block;
+  height: 1px;
+  margin: 1rem 0;
+  width: 100%;
 }
 
-.accordion__item:first-child {
-  border-top: 0;
-  padding-top: 0;
-}
-
-.accordion__item:last-child {
-  padding-bottom: 0;
+.accordion__item:last-child::after {
+  display: none;
 }
 
 .accordion__item--active .accordion__item-title::after {
@@ -103,10 +104,6 @@ h1::before {
 
 .accordion__item-title:hover {
   color: hsl(280deg 80% 60%);
-}
-
-.accordion__item-title:focus {
-  color: hsl(292deg 42% 14%);
 }
 
 .accordion__item-title::after {
